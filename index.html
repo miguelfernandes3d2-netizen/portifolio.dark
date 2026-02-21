@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>Portfólio | Miguel Fernandes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+body {
+  background-color: #212121;
+  color: #e0e0e0;
+}
+
+/* HEADER */
+header {
+  max-width: 1100px; margin: auto; padding: 60px 20px 40px; 
+  display: flex; align-items: center; gap: 30px; border-bottom: 1px 
+  solid #333;
+}
+
+/* PERFIL */
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #444;
+}
+
+.hero-text h1 {
+  font-size: 2.4rem;
+  font-weight: 600;
+}
+
+.hero-text p {
+  color: #bdbdbd;
+}
+
+/* BOTÕES */
+.hero-buttons {
+  margin-top: 16px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.hero-buttons a {
+  text-decoration: none;
+  font-size: 0.9rem;
+  padding: 10px 18px;
+  border-radius: 8px;
+  background: #111;
+  color: white;
+  transition: 0.2s;
+}
+
+.hero-buttons a.secondary {
+  background: #2a2a2a;
+  color: #e0e0e0;
+}
+
+.hero-buttons a:hover {
+  transform: translateY(-2px);
+}
+
+/* MAIN */
+main {
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+section {
+  margin-bottom: 70px;
+}
+
+.section-title {
+  font-size: 1.6rem;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+/* ABOUT */
+.about {
+  color: #cfcfcf;
+}
+
+/* SKILLS */
+.skills {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.skill {
+  border: 1px solid #3a3a3a;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  background: #2a2a2a;
+  color: #e0e0e0;
+}
+
+/* PROJETOS */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px;
+}
+
+.card {
+  border: 1px solid #2f2f2f;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #2a2a2a;
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 30px rgba(0,0,0,0.4);
+}
+
+.card img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 18px;
+}
+
+.card h3 {
+  margin-bottom: 6px;
+  font-size: 1.05rem;
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: #bdbdbd;
+  margin-bottom: 12px;
+}
+
+.card a {
+  text-decoration: none;
+  font-size: 0.85rem;
+  padding: 8px 14px;
+  border-radius: 7px;
+  background: #111;
+  color: white;
+}
+
+/* CONTATO */
+.contact-box {
+  max-width: 500px;
+  display: grid;
+  gap: 14px;
+}
+
+.contact-box a {
+  text-decoration: none;
+  border: 1px solid #3a3a3a;
+  padding: 12px 16px;
+  border-radius: 10px;
+  color: #e0e0e0;
+  transition: 0.2s;
+  font-size: 0.95rem;
+}
+
+.contact-box a:hover {
+  background: #2a2a2a;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 25px;
+  color: #9e9e9e;
+  border-top: 1px solid #333;
+  margin-top: 80px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 650px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="perfil.jpg" alt="Foto de perfil" class="profile-pic">
+    <div class="hero-text">
+      <h1>Miguel Fernandes</h1>
+      <p>Desenvolvedor web focado em criar sites modernos, rápidos e profissionais para negócios locais e projetos pessoais.</p>
+
+      <div class="hero-buttons">
+        <a href="#projetos">Ver projetos</a>
+        <a href="#contato" class="secondary">Contato</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <section>
+      <h2 class="section-title">Sobre mim</h2>
+      <p class="about">
+        Sou desenvolvedor web focado em criar sites modernos, rápidos e responsivos.
+        Gosto de transformar ideias em experiências digitais profissionais e que realmente ajudam negócios a vender mais.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="section-title">Tecnologias</h2>
+      <div class="skills">
+        <span class="skill">HTML</span>
+        <span class="skill">CSS</span>
+        <span class="skill">JavaScript</span>
+        <span class="skill">GitHub</span>
+        <span class="skill">Node.js</span>
+        <span class="skill">Responsividade</span>
+      </div>
+    </section>
+
+    <section id="projetos">
+      <h2 class="section-title">Projetos</h2>
+
+      <div class="projects">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?auto=format&fit=crop&w=900&q=80">
+          <div class="card-content">
+            <h3>Site da Barbearia</h3>
+            <p>Landing page profissional para barbearia local.</p>
+            <a href="https://miguelfernandes3d2-netizen.github.io/barbearia-2.0/" target="_blank">Ver projeto</a>
+          </div>
+        </div>
+
+      <div class="card">
+  <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&w=900&q=80" alt="Projeto em breve">
+  <div class="card-content">
+    <h3>Em breve...</h3>
+    <p>Novo projeto sendo desenvolvido.</p>
+    <a href="#">Em breve</a>
+  </div>
+</div>
+
+        <div class="card">
+          <img src="streamflix.png" alt="Preview do streamflix">
+          <div class="card-content">
+            <h3>Projeto Pessoal</h3>
+            <p>Website institucional com design clean.</p>
+            <a href="https://miguelfernandes3d2-netizen.github.io/streamflix/" target="_blank">Ver projeto</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato">
+      <h2 class="section-title">Contato</h2>
+      <div class="contact-box">
+        <a href="https://wa.me/5583998791005" target="_blank">📱 WhatsApp</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    © 2026 — Miguel Fernandes | Portfólio
+  </footer>
+
+</body>
+</html>
